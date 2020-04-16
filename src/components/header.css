@@ -1,0 +1,16 @@
+.header {
+    margin: 20px;
+    margin-top: 0;
+    padding: 20px;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+}
+
+.header h1 {
+    display: inline-flex;
+}
+
+.header i {
+    display: inline-flex;
+    font-size: 30px;
+}
