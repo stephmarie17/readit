@@ -1,7 +1,7 @@
 import React from 'react'
 import './pagination.css';
 
-const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
+const Pagination = ({ currentPage, postsPerPage, totalPosts, paginate }) => {
     const pageNumbers = [];
 
     for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
@@ -11,7 +11,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
         <div className="pagination-display">
             <ul className="pagination">
                 {pageNumbers.map(number => (
-                    <li key={number} className="pagination-item">
+                    <li key={number} className="pagination-item" id={(currentPage === number ? "active" : "")}>
                         <a onClick={() => paginate(number)} href="!#" className="pagination-link">
                             {number}
                         </a>

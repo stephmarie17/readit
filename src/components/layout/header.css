@@ -12,6 +12,7 @@
 
 .header-styled h1 {
     margin-top: 70px;
+    margin-left: 20px;
     padding-left: 10px;
     display: inline-flex;
     font-size: 3em;
@@ -20,6 +21,7 @@
 .header-styled p {
     font-size: 1.5em;
     padding-left: 10px;
+    margin-left: 20px;
 }
 
 .header-styled i {

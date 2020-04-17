@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 .pagination {
     list-style: none;
@@ -32,3 +32,11 @@
     color: #235ab9;
 }
 
+#active {
+    background-color: #235ab9;
+    color: #fafafa;
+}
+
+#active a {
+    color: #fafafa;
+}

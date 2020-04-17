@@ -12,21 +12,22 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(10);
+  const [after, setAfter] = useState(null);
 
   const fetchPosts = async () => {
     setLoading(true);
     const res = await axios.get('https://www.reddit.com/r/all/hot.json?sort=new');
     const postData = res.data.data.children;
+    const afterData = res.data.data.after;
     setPosts(postData);
+    setAfter(afterData);
     setLoading(false);
   }
 
   useEffect(() => {
-    fetchPosts();
+      fetchPosts();
     // es-lint-ignore-next-line
   },[]);
-
-  console.log(posts);
 
   // Get current posts
   const indexOfLastPost = currentPage * postsPerPage;
@@ -47,7 +48,7 @@ const App = () => {
       <Header />
       <Settings postsPerPage={postsPerPage} selectPostsPerPage={selectPostsPerPage}/>     
       <Posts posts={currentPosts} loading={loading} />
-      <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate}/>
+      <Pagination currentPage={currentPage} postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate}/>
       <Footer />
     </div>
   )
