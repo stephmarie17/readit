@@ -4,6 +4,7 @@ import Posts from './components/Posts';
 import Pagination from './components/Pagination';
 import Header from './components/layout/Header';
 import Settings from './components/Settings';
+import Footer from './components/layout/Footer';
 import './App.css';
 
 const App = () => {
@@ -47,6 +48,7 @@ const App = () => {
       <Settings postsPerPage={postsPerPage} selectPostsPerPage={selectPostsPerPage}/>     
       <Posts posts={currentPosts} loading={loading} />
       <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate}/>
+      <Footer />
     </div>
   )
 }

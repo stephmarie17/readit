@@ -2,26 +2,29 @@
     margin-top: 0;
     margin-bottom: 10px;
     letter-spacing: 0.15em;
-    cursor: pointer;
     background-image: url('sincerely-media-header.jpg');
     background-position: top 20% center;
     background-size: cover;
     height: 50vh;
-    text-align: center;
+    color: #fafafa;
+    cursor: default;
 }
 
-.header h1 {
-    margin-top: 300px;
+.header-styled h1 {
+    margin-top: 70px;
+    padding-left: 10px;
     display: inline-flex;
+    font-size: 3em;
 }
 
-.header p {
-    margin-left: 20px;
+.header-styled p {
+    font-size: 1.5em;
+    padding-left: 10px;
 }
 
-.header i {
+.header-styled i {
     display: inline-flex;
-    font-size: 30px;
+    font-size: 3em;
 }
 
 .header-styled {

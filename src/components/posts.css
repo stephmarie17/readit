@@ -5,6 +5,7 @@
 .posts {
     list-style: none;
     margin-bottom: 20px;
+    padding: 0;
 }
 
 .post-item {
@@ -38,5 +39,6 @@ img {
     .post-display {
         display: flex;
         margin-right: 10px;
+        margin-left: 10px;
     }
 }

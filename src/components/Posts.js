@@ -14,7 +14,7 @@ const Posts = ({ posts, loading }) => {
         <ul className="posts">
             {posts.map(post => (
                 <li key={post.data.id} className="post-item">
-                {post.data.thumbnail? <img src={post.data.thumbnail} alt="thumbnail" /> :
+                {post.data.thumbnail !== 'default' ? <img src={post.data.thumbnail} alt="thumbnail" /> :
                 <img src="https://via.placeholder.com/100" alt="placeholder"/>}
                 <h4>{post.data.title}</h4>
                 <a href={`https://reddit.com${post.data.permalink}`} alt="reddit post link">Read more...</a>
