@@ -1,9 +1,8 @@
 .display-settings {
-    margin-left: 20px;
-    padding-left: 20px;
     padding-bottom: 10px;
     font-size: 0.85em;
-    text-align: center;
+    text-align: left;
+    max-width: 900px;
 }
 
 .select-posts {
@@ -14,4 +13,10 @@
     border: 1px solid #aaaaaa;
     box-shadow: 0 1px 0 1px rgba(0,0,0,.05);
     border-radius: .5em;
+}
+
+@media only screen and (max-width: 600px) {
+    .display-settings {
+        margin-left: 10px;
+    }
 }

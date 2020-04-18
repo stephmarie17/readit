@@ -1,5 +1,6 @@
 .post-display {
     max-width: 900px;
+    background-color: #fafafafa;
 }
 
 .posts {
@@ -10,13 +11,16 @@
 
 .post-item {
     padding: 10px;
-    border-top: 1px solid #191919;
-    border-right:1px solid #191919;
-    border-left:1px solid #191919;
+    border-top: 1px solid #cccccc;
+}
+
+.post-item h4 {
+    font-size: 1.25em;
+    font-weight: normal;
 }
 
 .post-item:last-of-type{
-    border-bottom: 1px solid #191919;
+    border-bottom: 1px solid #cccccc;
 }
 
 img {
