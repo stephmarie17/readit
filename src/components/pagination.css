@@ -22,21 +22,22 @@
     border-right: 0.5px solid #b0b0b1;
 }
 
-.pagination-item a {
+.pagination-link {
     text-decoration: none;
     color: #7b93bd;
 }
 
-.pagination-item a:hover {
+.pagination-link:hover {
     text-decoration: none;
-    color: #235ab9;
+    color: #b0b0b1;
+    cursor: pointer;
 }
 
 #active {
     background-color: #235ab9;
-    color: #fafafa;
 }
 
-#active a {
+#active span {
     color: #fafafa;
+    cursor: default;
 }
