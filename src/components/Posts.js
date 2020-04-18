@@ -3,7 +3,7 @@ import Spinner from './layout/Spinner';
 import './posts.css';
 
 const Posts = ({ posts, loading }) => {
-
+    // If posts have not loaded, render a spinner
     if(loading) {
         return (
             <Spinner />
@@ -14,6 +14,7 @@ const Posts = ({ posts, loading }) => {
         <ul className="posts">
             {posts.map(post => (
                 <li key={post.data.id} className="post-item">
+                {/* If no image thumbnail provided, display a placeholder image */}
                 {post.data.thumbnail.length > 7 ? <img src={post.data.thumbnail} alt="thumbnail" /> :
                 <img src="https://via.placeholder.com/100" alt="placeholder"/>}
                 <h4>{post.data.title}</h4>

@@ -12,32 +12,34 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(10);
-  const [after, setAfter] = useState(null);
 
+  // Fetch 25 hot posts from API
   const fetchPosts = async () => {
     setLoading(true);
     const res = await axios.get('https://www.reddit.com/r/all/hot.json?sort=new');
     const postData = res.data.data.children;
-    const afterData = res.data.data.after;
     setPosts(postData);
-    setAfter(afterData);
     setLoading(false);
   }
 
+  // Call the fetch function when component mounts
   useEffect(() => {
       fetchPosts();
     // es-lint-ignore-next-line
   },[]);
 
-  // Get current posts
+  // Get current posts to pass as props to Posts component
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
   // Click event to change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => {
+    setLoading(false);
+    setCurrentPage(pageNumber);
+  }
 
-  // Handle change event to update posts displayed per page
+  // Handle change event to update posts displayed per page and update Pagination component
   const selectPostsPerPage = (event) => {
     event.preventDefault()
     setPostsPerPage(event.target.value)
