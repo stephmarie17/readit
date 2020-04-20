@@ -5,20 +5,20 @@
     background-image: url('sincerely-media-header.jpg');
     background-position: top 20% center;
     background-size: cover;
-    height: 18vh;
+    height: 20vh;
     color: #fafafa;
     cursor: default;
 }
 
 .header-styled h1 {
-    margin-top: 70px;
-    margin-left: 10px;
-    display: inline-flex;
+    margin-top: 60px;
+    margin-left: 20px;
+    display: inline-block;
     font-size: 3em;
 }
 
 .header-styled p {
-    display: inline-flex;
+    display: inline-block;
     font-size: 1.5em;
     margin-left: 10px;
     color: #bbb8b8;
@@ -36,3 +36,22 @@
         padding-right: calc((100vw - 550px) / 2);
     }
 }
+
+
+/* Media query to ensure that heading text displays properly */
+@media only screen and (max-width: 550px) {
+    .header-styled h1 {
+        margin-left: 20px;
+        display: inline-block;
+        font-size: 2em;
+    }
+    
+    .header-styled p {
+        display: block;
+        margin-left: 20px;
+        margin-bottom: 5px;
+        font-size: 0.75em;
+        color: #bbb8b8;
+    }
+}
+
