@@ -7,6 +7,14 @@ A mini application to view a feed of hot Reddit posts fetched from the Reddit AP
 
 [Deployed Application](https://cocky-swartz-f47a14.netlify.app/)
 
+### Displays the current 25 hot posts from Reddit
+
+### Links to full post
+
+### Paginates results based on the amount of posts per page user selects
+
+### Responsive to web and mobile displays
+
 ## Local Installation
 
 ### Fork this repo and clone to your local machine
